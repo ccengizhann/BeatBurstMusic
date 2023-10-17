@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BeatBurstMusic.Domain.Common
 {
-    internal interface ICreatedOn
+    public interface ICreatedOn
     {
+        public DateTime CreatedOn { get; set; }
     }
 }

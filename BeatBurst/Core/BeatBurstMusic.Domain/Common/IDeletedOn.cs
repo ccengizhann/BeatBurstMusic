@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BeatBurstMusic.Domain.Common
 {
-    internal interface IDeletedOn
+    public interface IDeletedOn
     {
+        public DateTime? DeletedOn { get; set; }
     }
 }
