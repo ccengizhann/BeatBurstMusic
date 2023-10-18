@@ -10,8 +10,8 @@ namespace BeatBurstMusic.Persistance.Contexts
 {
     public class BeatBurstMusicDbContext: DbContext
     {
-        DbSet<Brand> Brands { get; set; }
-        DbSet<Instrument> Instruments { get; set; }
+       public DbSet<Brand> Brands { get; set; }
+        public DbSet<Instrument> Instruments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
