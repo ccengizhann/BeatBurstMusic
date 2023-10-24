@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BeatBurstMusic.Persistance.Contexts;
 using BeatBurstMusic.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace BeatBurstMusic.MVC.Controllers
 {
@@ -45,11 +46,10 @@ namespace BeatBurstMusic.MVC.Controllers
             return View();
         }
 
-        [HttpGet]
-        public IActionResult DeleteBrand(string id)
+        [Route("[controller]/[action]/{id}")]
+        public IActionResult Delete(string id)
         {
             var brand = _context.Brands.Where(x => x.Id == Guid.Parse(id)).FirstOrDefault();
-
             _context.Brands.Remove(brand);
 
             _context.SaveChanges();

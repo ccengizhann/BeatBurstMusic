@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BeatBurstMusic.Persistance.Migrations
 {
     /// <inheritdoc />
-    public partial class mig_1_create_tables_database : Migration
+    public partial class mig_1_creatTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -19,9 +19,13 @@ namespace BeatBurstMusic.Persistance.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     DisplayText = table.Column<string>(type: "text", nullable: false),
                     Address = table.Column<string>(type: "text", nullable: false),
+                    CreatedByUserId = table.Column<string>(type: "text", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    ModifiedByUserId = table.Column<string>(type: "text", nullable: true),
+                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DeletedByUserId = table.Column<string>(type: "text", nullable: true),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -34,14 +38,19 @@ namespace BeatBurstMusic.Persistance.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
                     BrandId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Model = table.Column<string>(type: "text", nullable: false),
-                    Color = table.Column<int>(type: "integer", nullable: false),
-                    ProductionYear = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Color = table.Column<int>(type: "integer", nullable: false),
+                    Barcode = table.Column<string>(type: "text", nullable: false),
+                    PictureUrl = table.Column<string>(type: "text", nullable: false),
+                    CreatedByUserId = table.Column<string>(type: "text", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    ModifiedByUserId = table.Column<string>(type: "text", nullable: true),
+                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DeletedByUserId = table.Column<string>(type: "text", nullable: true),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -8,6 +8,8 @@ namespace BeatBurstMusic.Domain.Common
 {
     public interface IDeletedOn
     {
-        public DateTime? DeletedOn { get; set; }
+        public string? DeletedByUserId { get; set; }
+        public DateTime DeletedOn { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }
