@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace BeatBurstMusic.Domain.Entities
 {
-    public class Brand:EntityBase<Guid>
+    public class Category : EntityBase<Guid>
     {
         public string Name { get; set; }
 
-        public string DisplayText { get; set; }
+        public ICollection<InstrumentCategory> InstrumentCategories { get; set; }
 
-        public string Address { get; set; }
+        // dbContext.Categories.Include(x=>x.Products).FirstOrDefaultAsync(x=>x.Id == 12345);
 
-        public ICollection<Instrument> Instruments { get; set; }
+        // category.Products
     }
 }
