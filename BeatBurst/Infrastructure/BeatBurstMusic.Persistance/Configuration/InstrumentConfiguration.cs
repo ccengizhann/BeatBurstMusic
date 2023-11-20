@@ -59,12 +59,12 @@ namespace BeatBurstMusic.Persistance.Configuration
             builder.Property(x => x.IsDeleted).IsRequired();
 
             // Relationships
-            //builder.HasOne<Category>(x => x.Category)
-            //    .WithMany(x => x.Products)
-            //    .HasForeignKey(x => x.CategoryId);
+            builder.HasOne<Brand>(x => x.Brand)
+                .WithMany(x => x.Instruments)
+                .HasForeignKey(x => x.BrandId);
 
 
-            builder.ToTable("Products");
+            builder.ToTable("Instruments");
         }
     }
 }
