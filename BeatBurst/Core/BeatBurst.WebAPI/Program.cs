@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Value;
 
@@ -12,6 +10,9 @@ builder.Services.AddDbContext<BeatBurstMusicDbContext>(options =>
 {
     options.UseNpgsql(connectionString);
 });
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

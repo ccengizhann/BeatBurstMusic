@@ -54,7 +54,7 @@ namespace BeatBurstMusic.Persistance.Configuration
             // IsDeleted
             builder.Property(x => x.IsDeleted).IsRequired();
 
-            builder.ToTable("Categories");
+            builder.ToTable("Brands");
         }
 
     }

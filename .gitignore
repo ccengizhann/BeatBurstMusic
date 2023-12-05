@@ -397,3 +397,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 BeatBurst/Infrastructure/BeatBurstMusic.Persistance/PrivateInformations.json
+BeatBurst/Core/BeatBurst.API/appsettings.json
+BeatBurst/Core/BeatBurst.WebAPI/appsettings.json
+BeatBurst/Presentation/BeatBurstMusic.MVC/appsettings.json
+BeatBurst/Presentation/BeatBurstMusic.MVC/appsettings.json
