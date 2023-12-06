@@ -401,3 +401,5 @@ BeatBurst/Core/BeatBurst.API/appsettings.json
 BeatBurst/Core/BeatBurst.WebAPI/appsettings.json
 BeatBurst/Presentation/BeatBurstMusic.MVC/appsettings.json
 BeatBurst/Presentation/BeatBurstMusic.MVC/appsettings.json
+
+BeatBurst/Presentation/BeatBurst.API/appsettings.json
